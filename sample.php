@@ -25,7 +25,33 @@ $con->close();
 
 
 <div class="container">
-    <div class="box" style ="grid-area: profile">user profile</div>
+    <div class="box" style ="grid-area: profile">  <!--user info starts here-->
+
+
+        <div class= "homepic">
+                <div class="piccontainer">
+                    <h1> </h1>
+                </div>
+            <hr style="height: 5px; background-color: white; border: none;">
+
+        <ul>
+            <l1>1</l1>
+            <l1>2</l1>
+            <l1>3</l1>
+            <l1>4</l1>
+
+        </ul>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+    
     <div class="box" id ="feed" style = "grid-area: feed">
     <div id="postsContainer">
     <!-- Posts will be dynamically inserted here -->
@@ -57,7 +83,7 @@ include 'dbconnect.php';
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } else {
-   echo "Connected successfully to the database.";
+ 
 
 }
 

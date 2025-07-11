@@ -217,7 +217,7 @@ try {
     $mail->Host = 'smtp.gmail.com'; // Gmail SMTP server
     $mail->SMTPAuth = true;
     $mail->Username = 'michaelangelobillones69@gmail.com'; // Gmail address
-    $mail->Password = 'bcaa apym wlni xngh'; // App Password 
+    $mail->Password = 
     
     // **Enable STARTTLS to fix the 530-5.7.0 error**
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;

@@ -258,3 +258,24 @@ body {
   background: linear-gradient(to right, #2b6cb0, #1e4f80);
   transform: scale(1.02);
 }
+
+
+
+
+
+.homepic{
+    
+}
+
+
+.piccontainer{
+     display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically */
+  height: 250px;
+  width: 250px;
+  background-color: white;
+  border-radius: 20%;
+  margin: auto;     
+  padding: 5%;
+}

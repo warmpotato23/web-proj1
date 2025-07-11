@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+
+
+
+body, html{
+    display: block;
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: flex-start; /* Align items from the top */
+    height: 100%; /* Ensures full height coverage */
+    margin: 0;
+    padding: 0;
+     overflow: auto;
+}
+
+.navbar {
+    
+    
+    position: sticky;
+    top: 0; /* Sticks at the top */
+    width: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #605e64;
+    padding: 15px 20px;
+    color: white;
+}
+
+
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+.register-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Labels */
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input fields */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+/* Focus effect */
+input:focus, textarea:focus, select:focus {
+    border-color: black;
+    box-shadow: 0px 0px 5px rgba(73, 131, 175, 0.5);
+    outline: none;
+}
+
+/* Submit button */
+.form-button {
+    width: 100%;
+    padding: 10px;
+    background: lightblue;
+    border: none;
+    color: rgb(31, 0, 0);
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.form-button:hover {
+    background: lightblue;
+}
+
+/* Error messages */
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    form {
+        padding: 15px;
+    }
+}
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+#close-modal {
+    background-color: lightslategray;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+    }
+
+#modal-container{
+    /*display:none  hides the modal by default*/
+    display: none;  
+    position: fixed;
+   
+    justify-content: center;
+    align-items: center;
+ 
+    
+    top: 0px;
+    left:0px;
+    width:  100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal{
+    background-color: #fff;
+    position:center;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-container.show{
+    pointer-events:auto;
+    opacity:1;
+}
+
+
+#modal-content{
+
+    justify-content: center;
+    align-items: center;
+    top: 100px;
+    left: 100px;
+
+
+}
+
+
+
+
+.user-info {
+    top:0;
+
+   
+    height: 100%;
+    width:15%;
+    margin-right: .5%;
+    background-color: rgb(0, 153, 204);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .5); /* Shadow properties */
+    justify-content: center;
+ 
+}
+
+
+/*.feed{
+    background-color: rgb(0, 153, 204);
+    position: relative;
+    height: 100%;
+    width: 70%;
+    margin-left: 17%;
+    top:0;
+    margin-top: 3.8%;
+   justify-self: center;
+    align-self: center;
+}
+*/
+.feed {
+    position: relative; /* Keeps it in the document flow */
+    top:0;
+    width: 70%;
+    margin: 0 auto; /* Centers it horizontally */
+    background-color: rgb(0, 153, 204);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    
+}
+.container{
+ 
+
+    display: flex;
+    height: 100vh; /* This ensures it takes the full height of the screen */
+    gap:0;
+    
+
+}
+
+
+.friends{
+
+    background-color: rosybrown;
+    position: relative;
+    width: 15%;
+    margin-left: .5%;
+
+}
+.user-info-header{
+    position: sticky;
+    margin:5%;
+    width: 10vh;
+    border-radius: 10px;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+
+    
+
+
+}
+
+.user-info-header:hover{
+    width: 10vh;
+    gap:0;
+   
+    
+}
+
+.item{
+    width: 10vh;
+   height: 5vh;
+    transition: width 0.3s;
+    background-color:rgb(160, 198, 211);
+    margin:0;
+    padding:0;
+    border-radius: 3px;
+   
+}
+
+.item:hover{
+    width: 20vh;
+    justify-self: center;
+    justify-items: center;
+    text-align: center;
+    
+    
+}
+
+ul{
+    margin:0;
+    padding:0;
+    gap:0;
+    list-style: none; /* Ensure no default bullets */
+    justify-items: center;
+}
+  
+li {
+    margin: 0;
+    padding: 0;
+    display:block;
+    
+}
+
+
+
+
+
+.pfp {
+   
+  
+ 
+    justify-self: center;
+
+    
+}
+
+.pfp-img{
+    border-radius: 50%;
+    margin-right: 10%;
+    border: solid grey 10px;
+    width: 23vh; 
+    height:20vh;
+    
+    
+}
+
+#main-div{
+    opacity: 0;
+    transform: scale(0.5);
+    animation: popUp 0.5s ease-out forwards;   
+
+}
+/*post css starts*/
+#postForm{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10vh;
+
+}
+img {
+    max-width: 100%; /* Ensures image doesn't exceed its container */
+    height: auto; /* Maintains aspect ratio */
+    position: relative; /* Prevents absolute positioning issues */
+    z-index: 1; /* Lower z-index to prevent overlap */
+}
+
+.main-post-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10vh;
+    padding-bottom: 10vh;
+}
+#postsContainer .post {
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
